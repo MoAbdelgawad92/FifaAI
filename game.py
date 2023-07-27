@@ -7,7 +7,6 @@ from gamebase import Goal,Ball,Player
 class Game():
     def __init__(self,rows=45,cols=91):
         self.world = np.zeros((rows,cols))
-        worldMidHeigh =(rows//2)
         self.hight = rows
         self.width = cols
         # self goal 
@@ -63,7 +62,8 @@ class Game():
             renderCanves = np.zeros((450,910,3))
             for element in listOfObj:
                 self.world[element.h,element.w] = 1
-                renderCanves[element.h*10:element.h*10+element.size,element.w*10:element.w*10+10] = element.color
+                renderCanves[element.h*10:element.h*10+element.size,
+                             element.w*10:element.w*10+element.size] = element.color
             return renderCanves
 
     def render(self,RGB = True,Manual = False):

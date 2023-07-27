@@ -19,5 +19,4 @@ for i in range(4):
 while not done:
        
         cv2 = game.render(Manual=True)
-        # cv2.waitKey(0)
         print(agent.replay_memory.frames[-1])

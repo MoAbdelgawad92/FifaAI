@@ -7,7 +7,6 @@ game = Game()
 
 agent = DQNAgent(game.observation_shape,game.n_actions)
 rewards = [0,0]
-# agent.loadPreTrainedModel()
 
 for i in range(4):
         obs = game.reset()

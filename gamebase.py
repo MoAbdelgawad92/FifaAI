@@ -45,7 +45,7 @@ class Goal(Point):
             w = 0
             Ptype = 201
         
-        super().__init__(h,w,gameShape,Ptype,size,color=[0,255,0])
+        super().__init__(h,w,gameShape,Ptype,size*2,color=[0,255,0])
     def move(self, action):
         pass
         return
@@ -59,7 +59,7 @@ class Goal(Point):
             return False
         else:
             # to fix to be on the Right
-            if ball.w != self.gameWidth: return False
+            if ball.w != self.w: return False
             if ball.h > self.top and ball.h < self.bot: 
                 return True
             return False
